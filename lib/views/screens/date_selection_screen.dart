@@ -21,7 +21,6 @@ class _DateSelectionScreenState extends State<DateSelectionScreen> {
     if (_selectedDay != null && _focusedDay != null) {
       Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => const TimeSelectionScreen()));
-      
     }
   }
 
