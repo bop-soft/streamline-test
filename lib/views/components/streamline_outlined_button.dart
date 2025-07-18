@@ -10,6 +10,7 @@ class StreamlineOutlinedButton {
         onPressed: () {},
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.all<Color>(Colors.white),
+          splashFactory: NoSplash.splashFactory,
           side: WidgetStateProperty.all<BorderSide>(BorderSide(color: Colors.green)),
           shape: WidgetStateProperty.all<OutlinedBorder>(
             RoundedRectangleBorder(
