@@ -13,8 +13,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
+          colorSchemeSeed: Colors.green,
           fontFamily: GoogleFonts.lato().fontFamily,
-          primarySwatch: Colors.green,
         ),
       home: MainScreen(
       ),

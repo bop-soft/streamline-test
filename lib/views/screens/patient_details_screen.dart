@@ -3,7 +3,7 @@ import 'package:streamline/config/constants.dart';
 import 'package:streamline/views/components/streamline_app_bar.dart';
 import 'package:streamline/views/components/streamline_elevated_button.dart';
 import 'package:streamline/views/components/streamline_text_field.dart';
-import 'package:streamline/views/screens/timeline_screen.dart';
+import 'package:streamline/views/screens/date_selection_screen.dart';
 
 class PatientDetailsScreen extends StatefulWidget {
   const PatientDetailsScreen({super.key});
@@ -32,7 +32,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
   _onContinuing(){
     if(_formKey.currentState!.validate()){
       Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => const TimelineScreen()));
+        builder: (context) => const DateSelectionScreen()));
     }
   }
 
