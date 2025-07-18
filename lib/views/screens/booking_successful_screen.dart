@@ -4,6 +4,7 @@ import 'package:streamline/services/calendar_permission_service.dart';
 import 'package:streamline/views/components/streamline_elevated_button.dart';
 import 'package:streamline/views/components/streamline_outlined_button.dart';
 import 'package:streamline/views/components/streamline_snackbar.dart';
+import 'package:streamline/views/screens/manage_appointments_screen.dart';
 
 class BookingSuccessfulScreen extends StatefulWidget {
   const BookingSuccessfulScreen({super.key});
@@ -14,7 +15,10 @@ class BookingSuccessfulScreen extends StatefulWidget {
 
 class _BookingSuccessfulScreenState extends State<BookingSuccessfulScreen> {
 
-_onContinuing(){}
+_onContinuing(){
+  Navigator.of(context).pushReplacement(MaterialPageRoute
+  (builder: (context) => const ManageAppointmentsScreen()));
+}
 
   @override
   Widget build(BuildContext context) {
