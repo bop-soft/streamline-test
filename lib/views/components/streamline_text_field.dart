@@ -20,7 +20,9 @@ class StreamlineTextField extends StatelessWidget {
       this.initialValue,
       this.onChanged,
       this.hintText,
-      this.autofocus,});
+      this.autofocus,
+      this.validatorText,
+      });
   final String label;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
@@ -37,6 +39,7 @@ class StreamlineTextField extends StatelessWidget {
   final void Function(String)? onChanged;
   final String? hintText;
   final bool? autofocus;
+  final String? validatorText;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +57,7 @@ class StreamlineTextField extends StatelessWidget {
         validator: validator ??
             (value) {
               if (value == null || value.isEmpty) {
-                return "";
+                return validatorText ?? "";
               }
               return null;
             },
@@ -63,11 +66,25 @@ class StreamlineTextField extends StatelessWidget {
         decoration: decoration ??
             InputDecoration(
               border: const OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.green),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10.0),
+                ),
+              ),
+              focusedBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.green),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10.0),
+                ),
+              ),
+              enabledBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.green),
                 borderRadius: BorderRadius.all(
                   Radius.circular(10.0),
                 ),
               ),
               label: Text(label),
+              labelStyle: TextStyle(color: Colors.green),
               suffixIcon: suffixIcon,
               prefixIcon: prefixIcon,
               helperText: helperText ?? '',

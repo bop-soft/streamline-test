@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:streamline/config/constants.dart';
 
 class StreamlineOutlinedButton {
-  static build(BuildContext context, title) {
+  static build(BuildContext context, title, {
+    required void Function()? onPressed,
+  }) {
     return SizedBox(
       width: double.infinity,
       height: 60,
       child: OutlinedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.all<Color>(Colors.white),
           splashFactory: NoSplash.splashFactory,

@@ -3,6 +3,7 @@ import 'package:streamline/config/constants.dart';
 import 'package:streamline/views/components/streamline_app_bar.dart';
 import 'package:streamline/views/components/streamline_elevated_button.dart';
 import 'package:streamline/views/components/streamline_outlined_button.dart';
+import 'package:streamline/views/screens/patient_details_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -18,9 +19,12 @@ class MainScreen extends StatelessWidget {
         height: 180,
         child: Column(
           children: [
-            StreamlineOutlinedButton.build(context, "Manage appointments"),
+            StreamlineOutlinedButton.build(context, "Manage appointments",
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const PatientDetailsScreen()))),
             const SizedBox(height: 10),
-            StreamlineElevatedButton.build(context, "Book an appointment"),
+            StreamlineElevatedButton.build(context, "Book an appointment",
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const PatientDetailsScreen()))
+            ),
           ],
         ),
       ),
