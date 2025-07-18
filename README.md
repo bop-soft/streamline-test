@@ -17,7 +17,7 @@ A Flutter Booking Project.
 ## Running the App
 - Clone the repository
 ```bash
-git clone https://github.com/bopeng/streamline.git
+git clone https://github.com/**
 ```
 - Go to the project directory
 ```bash
