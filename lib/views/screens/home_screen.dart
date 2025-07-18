@@ -16,7 +16,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: StreamlineAppBar.build(context, title: "My Appointments"),
+      appBar: StreamlineAppBar.build(context, title: "My Appointments",
+      actions: [
+        IconButton(onPressed: () {}, icon: Icon(Icons.notifications_outlined))
+      ]),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: Colors.green,
         label: Text("Add Appointment", 
